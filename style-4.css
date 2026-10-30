@@ -1,0 +1,95 @@
+/* Style 4: ink outlines, flat navy/ivory planes and vermilion signals.
+   Sage = allies and movement; red = hostiles; ochre = terrain and warnings. */
+:root{
+ --bg:#0e1523;--panel:#151e2d;--line:#3d4855;--muted:#a2acae;
+ --text:#ede8d8;--cyan:#bbc9a4;--amber:#e2bc78;--red:#ff7664;
+ --vermilion:#d84b38;--ink:#090f1a;--terrain-hindering:#d5b279;
+ --map-bg:#202c38;--map-road:#2b3943;--map-building:#34434b;
+ color-scheme:dark;
+}
+body{background:var(--bg)}
+button,select{border-radius:0}
+button:focus-visible,a:focus-visible,select:focus-visible{outline:2px solid var(--text);outline-offset:3px}
+button:hover:not(:disabled){background:#303d48;border-color:var(--text)}
+.topbar{background:var(--ink);border-bottom:3px solid var(--vermilion)}
+.brand{font-weight:700;color:var(--text)}
+.brand-mark{background:var(--vermilion);border:0;transform:none;color:var(--text);font-size:14px;letter-spacing:-1px}
+.brand-mark span{color:var(--text);background:var(--ink)}
+.mission-picker select{background:var(--panel);border-color:var(--line);color:var(--text)}
+.mission-progress b{color:var(--text);font-weight:600}
+.header-actions button{border-color:var(--line);color:var(--text)}
+.leftpanel,.rightpanel{background:var(--panel);scrollbar-color:#657179 var(--bg)}
+.leftpanel{border-right:2px solid var(--ink)}
+.rightpanel{border-left:2px solid var(--ink)}
+.panel-heading,.rightpanel .panel-heading{background:var(--text);color:var(--ink);border-bottom:2px solid var(--ink);font-weight:600;letter-spacing:1.5px}
+.panel-heading .tag{border-color:#56604c;color:#293b31}
+.panel-heading .panel-close{color:var(--ink)}
+.panel-heading .panel-close:hover{background:#d0d4c1;color:var(--ink)}
+.unit-card{background:#1b2736;border:1px solid var(--line);border-left:3px solid #52645b}
+.unit-card:hover:not(:disabled){background:#2a3944;border-color:var(--cyan)}
+.unit-card.selected{background:#303e43;border-color:var(--cyan);border-left-color:var(--text);box-shadow:none}
+.unit-name{color:var(--text);font-weight:700;letter-spacing:1px}
+.unit-role,.unit-bottom{color:var(--muted)}
+.unit-status{color:var(--cyan)}
+.hp-line{background:var(--ink);height:4px}
+.hp-fill{background:var(--cyan)}
+.roster-miniature{width:38px;height:46px}
+.maptoolbar{background:var(--ink);border-bottom:1px solid var(--line);color:var(--text)}
+.map-tools button{color:var(--text)}
+.map-tools button:hover:not(:disabled){background:#303d48}
+.live-dot{border-radius:0;background:var(--cyan);box-shadow:none}
+.map-container{background:var(--map-bg)}
+.map-container:after{display:none}
+#map-viewport{scrollbar-color:#768279 var(--bg)}
+.map-coordinates,.map-caption{background:#121b2bea;color:#b9c4bb;text-shadow:none;border-left:2px solid var(--cyan)}
+.map-coordinates span{color:#b9c4bb}
+.maplegend{background:var(--ink);color:var(--muted);border-top:1px solid var(--line)}
+.legend-square.cyan{border-color:var(--cyan);background:#bbc9a444}
+.legend-square.red{border-color:var(--red);background:#ff766444}
+.legend-square.cover{color:var(--amber)}
+.legend-square.obstacle{color:#9eacac;background:#9eacac44}
+#overview{background:var(--bg);border:2px solid var(--cyan);box-shadow:4px 4px 0 #090f1a80}
+.mecha-sprite{filter:none}
+.map-unit-code{stroke:var(--ink);stroke-width:2.5px}
+.unit-svg.selected .select-ring{stroke:var(--text);stroke-width:2.5}
+.move-cell{fill:#bbc9a41c;stroke:#bbc9a470}
+.move-cell:hover{fill:#bbc9a45e}
+.aim-ring{stroke:var(--red)}
+.turnbar{background:var(--ink);border-top:2px solid var(--line)}
+.turnnumber{border-right:2px solid var(--line)}
+.turnnumber b{color:var(--text);font-weight:700}
+.turn-progress i{background:var(--cyan)}
+.turn-progress i.done{background:#35424b}
+#end-turn,.primary{background:var(--vermilion);border:1px solid var(--vermilion);color:#fff5e7;font-weight:600}
+#end-turn:hover:not(:disabled),.primary:hover:not(:disabled){background:#b2372b;border-color:var(--text);color:#fff5e7}
+dialog{background:var(--panel);border:1px solid var(--text);border-top:5px solid var(--vermilion);box-shadow:8px 8px 0 #090f1a99}
+dialog::backdrop{background:#090f1ac9;backdrop-filter:none}
+dialog h2{color:var(--text);font-weight:700;text-transform:uppercase;letter-spacing:1px}
+dialog p{color:#c2c8c6}
+.eyebrow{color:var(--red)}
+.brief-steps b{color:var(--red)}
+#phase-banner{background:var(--ink);color:var(--red);border-block:2px solid var(--vermilion);font-weight:700}
+#toast{background:var(--panel);color:var(--text);border:1px solid var(--cyan);box-shadow:4px 4px 0 #090f1a99}
+#orders.tactical-console{background:var(--panel);border:1px solid var(--text);box-shadow:5px 5px 0 #090f1a99}
+.console-header{background:var(--text);color:var(--ink);border-bottom:2px solid var(--ink)}
+.console-header strong{font-weight:700}
+.console-header small{color:#36464b}
+.console-header button:hover:not(:disabled){background:#d0d4c1;color:var(--ink)}
+.console-tabs button{border-color:var(--line)}
+.console-tabs button[aria-pressed=true],button.active{background:var(--cyan);border-color:var(--cyan);color:var(--ink)}
+.console-meters,.console-foot small,.console-message,.console-detail,.console-choice small,.console-outcome small{color:#c1c8c5}
+.console-choice{background:#1e2b3b;border-color:var(--line)}
+.console-choice strong{color:var(--text)}
+.console-choice:disabled,.console-choice:disabled strong{background:#18212e;color:#9aa6aa;border-color:#3d4855}
+.console-choice[aria-pressed=true]{background:#303e43;border-color:var(--cyan);box-shadow:inset 3px 0 var(--cyan)}
+.console-choice[aria-pressed=true] strong{color:var(--text)}
+.console-foot,.console-outcome,.reaction-preview{border-color:var(--line)}
+.console-controls .console-confirm{background:var(--cyan);border-color:var(--cyan);color:var(--ink)}
+.console-controls .console-confirm:hover{background:#d2ddbd;color:var(--ink)}
+.console-body{scrollbar-color:#768279 var(--panel)}
+#reaction{border-color:var(--red);border-top-width:5px}
+#reaction button[aria-pressed=true]{background:#303e43;border-color:var(--cyan);color:var(--text)}
+.reaction-options small,.reaction-weapons small,.reaction-preview span,#reaction .reaction-note,.reaction-incoming small{color:#c1c8c5}
+@media(max-width:1150px){.roster-miniature{width:31px;height:40px}}
+@media(max-width:800px){.roster-miniature{width:38px;height:46px}}
+@media(max-height:600px) and (min-width:801px){.roster-miniature{height:30px}}

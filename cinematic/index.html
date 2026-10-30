@@ -1,0 +1,22 @@
+<!doctype html>
+<html lang="fr">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Sic Semper Tyrannis — L’Éveil</title>
+<link rel="stylesheet" href="player.css">
+<main>
+  <header><a href="../">SIC SEMPER TYRANNIS</a><span>PROLOGUE / ÉTUDE 02</span></header>
+  <div class="film"><canvas id="film" width="1280" height="720" role="img" aria-label="Un terminal ancien affiche : Sur quoi allons-nous travailler ? Les rebelles demandent comment renverser Picrochole. La réponse SIC SEMPER TYRANNIS réveille les lumières d’une abbaye-datacenter."></canvas></div>
+  <div class="controls">
+    <button id="play" disabled>Chargement…</button>
+    <button id="restart" aria-label="Reprendre au début" disabled>Rejouer</button>
+    <label class="timeline"><span class="sr-only">Position de lecture</span><input id="seek" type="range" min="0" max="15" step="0.01" value="0" disabled></label>
+    <output id="time">00:00 / 00:15</output>
+    <button id="sound" aria-pressed="true">Son activé</button>
+    <button id="fullscreen">Plein écran</button>
+  </div>
+  <footer><div><h1>L’Éveil</h1><p>Le terminal. La réponse. Le premier battement.</p></div><span>15 s · maquette animée<br>Ambiance sonore provisoire · sans chœur</span></footer>
+  <p id="status" role="status" class="sr-only"></p>
+</main>
+<script src="film.js"></script>
+</html>

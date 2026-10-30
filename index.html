@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="fr">
+<head>
+ <meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+ <meta name="theme-color" content="#0e1523">
+ <meta name="description" content="Sic Semper Tyrannis — Prenez le commandement de l’escouade Raven.">
+ <title>SIC SEMPER TYRANNIS</title><link rel="stylesheet" href="menu.css">
+</head>
+<body>
+ <main class="menu-shell">
+  <header class="menu-brand"><span class="insignia" aria-hidden="true">SST<span>＋</span></span><span>COMMANDEMENT / RAVEN</span></header>
+  <section id="main-menu" aria-labelledby="game-title">
+   <p class="eyebrow">SIC SEMPER TYRANNIS</p>
+   <h1 id="game-title">SIC SEMPER<br><span>TYRANNIS</span></h1>
+   <nav class="menu-actions" aria-label="Menu principal">
+    <a class="menu-action primary" href="cinematic/style-4/index.html?campaign=1"><span>Nouvelle partie</span><span aria-hidden="true">→</span></a>
+    <button class="menu-action" disabled aria-describedby="save-status">Charger une partie</button>
+    <a class="menu-action" href="?screen=options">Options</a>
+   </nav>
+   <p id="save-status" class="save-status">Aucune sauvegarde disponible.</p>
+  </section>
+  <section id="empty-menu" aria-labelledby="screen-title" hidden>
+   <p class="eyebrow">SIC SEMPER TYRANNIS</p>
+   <h1 id="screen-title" tabindex="-1"></h1>
+   <a class="back-link" href="./">← Menu principal</a>
+  </section>
+  <footer><span>ESCOUADE RAVEN</span><span class="footer-rule" aria-hidden="true"></span><span>LIBERTÉ / RÉSISTANCE</span></footer>
+ </main>
+ <script type="module" src="menu.js"></script>
+</body>
+</html>

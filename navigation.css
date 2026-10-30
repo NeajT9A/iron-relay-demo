@@ -1,0 +1,18 @@
+.mission-picker{display:flex;align-items:center;gap:12px;padding:12px 27px 0;font:10px var(--mono);color:var(--muted)}
+.mission-picker select{min-height:36px;max-width:100%;padding:7px 30px 7px 10px;color:var(--text);background:#1c2c2e;border:1px solid #4a6563;font:12px var(--mono);border-radius:2px}
+.mission-picker select:focus-visible{outline:2px solid var(--cyan);outline-offset:2px}
+.mission-picker>span{margin-left:auto;font-size:9px;letter-spacing:1px}
+.map-container{display:block;flex:none;height:clamp(360px,60vh,720px);min-height:0;overflow:hidden}
+#map-viewport{position:absolute;inset:0;overflow:auto;overscroll-behavior:contain;scrollbar-width:thin;scrollbar-color:#78998d #172427;outline-offset:-3px;touch-action:pan-x pan-y}
+#battlefield{max-width:none;max-height:none;min-height:0;flex:none}
+.map-container:after{z-index:1}.map-coordinates,.map-caption{z-index:2;text-shadow:0 1px 3px #071112;background:#152326c9;padding:4px 6px;width:max-content;max-width:calc(100% - 32px);gap:15px}
+.map-caption{bottom:18px}.map-coordinates{top:8px}
+#phase-banner{z-index:3;top:0;font-size:12px;padding:9px;letter-spacing:2px}
+#overview{position:absolute;right:20px;bottom:24px;z-index:3;width:150px;height:113px;padding:0;border:1px solid #81917d;background:#142326ed;box-shadow:0 3px 14px #06101088;cursor:crosshair}
+#overview[hidden]{display:none}#overview svg{display:block;width:100%;height:100%}
+#zoom-label{min-width:42px;text-align:center;font-size:9px;color:var(--text)}
+.map-tools{gap:5px}.map-tools button{min-width:28px;min-height:30px}.map-tools button#zoom-in,.map-tools button#zoom-out{font-size:18px}.map-tools button:disabled{opacity:.35}
+.pan-ready,.panning{cursor:grab}.pan-ready .cell{cursor:grab}.panning,.panning .cell{cursor:grabbing}
+#map-viewport:focus-visible{outline:2px solid var(--cyan)}
+@media(max-width:1200px){.maptoolbar{padding-inline:8px;letter-spacing:0}.maptoolbar .muted{display:none}.mission-picker{padding-inline:15px}}
+@media(max-width:640px){.mission-picker{padding:10px 10px 0;gap:8px;flex-wrap:wrap}.mission-picker select{min-width:0;flex:1;font-size:10px}.mission-picker>span{margin-left:43px;width:100%;font-size:8px}.map-container{height:55vh;min-height:320px;max-height:560px}.maptoolbar{font-size:6px}.map-tools{gap:2px}.map-tools button{font-size:7px;padding:3px;min-width:22px}#zoom-label{min-width:34px;font-size:8px}#overview{width:100px;height:75px;right:12px;bottom:16px}.map-caption{font-size:6px;max-width:calc(100% - 135px)}.map-caption span:last-child{display:none}}
